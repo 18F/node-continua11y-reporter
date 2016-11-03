@@ -1,0 +1,27 @@
+{
+  "name": "continua11y-reports",
+  "version": "0.1.0",
+  "description": "Helper module for converting pa11y json reports into continua11y reports",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test node_modules/.bin/mocha --recursive",
+    "lint": "node_modules/.bin/jshint index.js lib/ test/",
+    "test_coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/18F/node-continua11y-reports.git"
+  },
+  "keywords": [
+    "continua11y",
+    "json",
+    "report",
+    "accessibility"
+  ],
+  "author": "baccigalupi",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/18F/node-continua11y-reports/issues"
+  },
+  "homepage": "https://github.com/18F/node-continua11y-reports#readme"
+}
