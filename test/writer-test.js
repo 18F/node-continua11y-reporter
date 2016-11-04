@@ -3,9 +3,9 @@
 const crypto      = require('crypto');
 const assert      = require('assert');
 const rimraf      = require('rimraf');
-const FileWriter  = require('../lib/file-writer');
+const Writer      = require('../lib/writer');
 
-describe('FileWriter', () => {
+describe('Writer', () => {
   const basePath = __dirname + '/fixtures/accessibility';
   const results  = require('./fixtures/data/with-errors.json');
   const pageData = {
@@ -13,7 +13,7 @@ describe('FileWriter', () => {
     size: 'mobile',
     other: 'stuff'
   };
-  const writer = new FileWriter(basePath);
+  const writer = new Writer(basePath);
 
   let filename;
 
