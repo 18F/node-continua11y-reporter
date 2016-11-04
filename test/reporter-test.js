@@ -4,9 +4,9 @@ const fs              = require('fs');
 const assert          = require('assert');
 const rimraf          = require('rimraf');
 const FileWriter      = require('../lib/writer');
-const Report          = require('../lib/report');
+const Reporter        = require('../lib/reporter');
 
-describe('Report', () => {
+describe('Reporter', () => {
   const results = require('./fixtures/data/no-errors.json');
   const basePath  = __dirname + '/fixtures/accessibility';
   let   report, pageData, filepath;
@@ -18,7 +18,7 @@ describe('Report', () => {
       other: 'stuff'
     };
     filepath = new FileWriter(basePath).filePath(pageData);
-    report   = new Report(basePath);
+    report   = new Reporter(basePath);
     rimraf(basePath, () => { done(); });
   });
 
