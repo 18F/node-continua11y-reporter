@@ -8,7 +8,7 @@ function reports(path) {
   return new Reporter(path);
 }
 
-reports.Report  = Report;
+reports.Reporter  = Reporter;
 reports.Results = Results;
 reports.Writer  = Writer;
 
